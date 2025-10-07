@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Kentsel Dönüşüm - Kayahan Mimarlık{% endblock %}
+{% block content %}
+
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title dark-background" style="background-image: url({% static 'img/page-title-bg.jpg' %});">
+    <div class="container position-relative">
+      <h1>Kentsel Dönüşüm</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+          <li><a href="{% url 'services' %}">Hizmetler</a></li>
+          <li class="current">Kentsel Dönüşüm</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <!-- End Page Title -->
+
+  <!-- Service Details Section -->
+  <section id="service-details" class="service-details section">
+    <div class="container">
+
+      <div class="row gy-4">
+
+        <!-- Sidebar -->
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="services-list">
+            <a href="{% url 'service_kentsel' %}" class="active">Kentsel Dönüşüm</a>
+            <a href="{% url 'service_konut' %}">Konut Projeleri</a>
+            <a href="{% url 'service_magaza' %}">Mağaza & Ofis Dekorasyonu</a>
+            <a href="{% url 'service_interior' %}">İç Mimarlık</a>
+            <a href="{% url 'service_mekanik' %}">Mekanik Uygulamalar</a>
+            <a href="{% url 'service_site' %}">Şantiye Yönetimi</a>
+          </div>
+
+          <h4>Kentsel Dönüşümde Güvenilir Çözümler</h4>
+          <p>
+            Kayahan Mimarlık ve İnşaat, kentsel dönüşüm projelerinde güvenli ve sürdürülebilir yaşam alanları inşa ederek modern şehircilik anlayışına katkıda bulunmaktadır.
+            Hukuki süreçlerden mühendislik çözümlerine kadar tüm aşamaları profesyonel ekibimizle yönetiyoruz.
+          </p>
+        </div>
+        <!-- End Sidebar -->
+
+        <!-- Main Content -->
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+          <img src="{% static 'img/kentsel-donusum.jpg' %}" alt="Kentsel Dönüşüm" class="img-fluid services-img">
+
+          <h3>Kentsel Dönüşüm ile Daha Güvenli ve Modern Yaşam Alanları</h3>
+          <p>
+            Depreme dayanıklı, modern ve çevreye duyarlı yapılar üretmek amacıyla yürüttüğümüz kentsel dönüşüm projelerinde; projelendirme, ruhsat süreçleri, yapı güçlendirme ve anahtar teslim uygulamaları üstleniyoruz.
+          </p>
+
+          <ul>
+            <li><i class="bi bi-check-circle"></i> <span>Yasal süreç ve ruhsat danışmanlığı</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Yapı analizi ve güçlendirme çözümleri</span></li>
+            <li><i class="bi bi-check-circle"></i> <span>Sosyal donatı ve yaşam kalitesi planlaması</span></li>
+          </ul>
+
+          <p>
+            Projelerimizde sürdürülebilirlik, iş güvenliği ve müşteri memnuniyetini ön planda tutarak, her aşamada şeffaf ve etkin iletişim sağlıyoruz. Hedefimiz; yalnızca bina yapmak değil, aynı zamanda şehirlerimizin geleceğini daha güvenli ve yaşanabilir kılmaktır.
+          </p>
+
+          <p>
+            Kayahan Mimarlık ve İnşaat olarak, kentsel dönüşümde modern mühendislik tekniklerini, yenilikçi mimari anlayışla birleştiriyor; şehirlerimizi geleceğe hazırlıyoruz.
+          </p>
+            <a href="{% url 'kentsel_donusum' %}" class="floating-btn kentsel">
+            <span>Kentsel Dönüşüm İçin Teklif Al </span>
+            </a>
+        </div>
+        <!-- End Main Content -->
+
+      </div>
+    </div>
+  </section>
+  <!-- /Service Details Section -->
+
+</main>
+{% endblock %}

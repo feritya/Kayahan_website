@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Mağaza & Ofis Dekorasyonu - Kayahan Mimarlık{% endblock %}
+{% block content %}
+<main class="main">
+  <div class="page-title dark-background" style="background-image: url({% static 'img/page-title-bg.jpg' %});">
+    <div class="container position-relative">
+      <h1>Mağaza & Ofis Dekorasyonu</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+          <li><a href="{% url 'services' %}">Hizmetler</a></li>
+          <li class="current">Mağaza & Ofis Dekorasyonu</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <section class="service-details section">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="services-list">
+            <a href="{% url 'service_kentsel' %}">Kentsel Dönüşüm</a>
+            <a href="{% url 'service_konut' %}">Konut Projeleri</a>
+            <a href="{% url 'service_magaza' %}" class="active">Mağaza & Ofis Dekorasyonu</a>
+            <a href="{% url 'service_interior' %}">İç Mimarlık</a>
+            <a href="{% url 'service_mekanik' %}">Mekanik Uygulamalar</a>
+            <a href="{% url 'service_site' %}">Şantiye Yönetimi</a>
+          </div>
+          <h4>Fonksiyonel ve Estetik Mekanlar</h4>
+          <p>Kurumsal kimliğe uygun mağaza, showroom ve ofis dekorasyonu çözümleri sunuyoruz.</p>
+        </div>
+        <div class="col-lg-8">
+          <img src="{% static 'img/magaza.jpg' %}" alt="Mağaza & Ofis Dekorasyonu" class="img-fluid services-img">
+          <h3>Markanıza Değer Katar</h3>
+          <p>Ofis ve mağazalarınızı estetik, işlevsel ve kullanıcı odaklı bir yaklaşımla tasarlıyoruz.</p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> Showroom ve mağaza tasarımları</li>
+            <li><i class="bi bi-check-circle"></i> Ofis planlama ve dekorasyon</li>
+            <li><i class="bi bi-check-circle"></i> Hızlı ve kaliteli uygulama</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

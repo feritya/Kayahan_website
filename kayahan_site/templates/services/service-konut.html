@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Konut Projeleri - Kayahan Mimarlık{% endblock %}
+{% block content %}
+<main class="main">
+  <div class="page-title dark-background" style="background-image: url({% static 'img/page-title-bg.jpg' %});">
+    <div class="container position-relative">
+      <h1>Konut Projeleri</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+          <li><a href="{% url 'services' %}">Hizmetler</a></li>
+          <li class="current">Konut Projeleri</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <section class="service-details section">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="services-list">
+            <a href="{% url 'service_kentsel' %}">Kentsel Dönüşüm</a>
+            <a href="{% url 'service_konut' %}" class="active">Konut Projeleri</a>
+            <a href="{% url 'service_magaza' %}">Mağaza & Ofis Dekorasyonu</a>
+            <a href="{% url 'service_interior' %}">İç Mimarlık</a>
+            <a href="{% url 'service_mekanik' %}">Mekanik Uygulamalar</a>
+            <a href="{% url 'service_site' %}">Şantiye Yönetimi</a>
+          </div>
+          <h4>Modern Konut Projeleri</h4>
+          <p>Toplu konut, site ve özel villa projelerinde modern tasarım ve kaliteli işçilik sunuyoruz.</p>
+        </div>
+        <div class="col-lg-8">
+          <img src="{% static 'img/konut.jpg' %}" alt="Konut Projeleri" class="img-fluid services-img">
+          <h3>Geleceğin Yaşam Alanlarını Tasarlıyoruz</h3>
+          <p>Konut projelerimizde modern mimariyi estetik, güvenlik ve fonksiyonellikle birleştiriyoruz.</p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> Toplu konut ve villa projeleri</li>
+            <li><i class="bi bi-check-circle"></i> Tadilat ve yenileme hizmetleri</li>
+            <li><i class="bi bi-check-circle"></i> Müşteri odaklı tasarım</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

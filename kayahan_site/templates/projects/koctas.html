@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Koçtaş Mağazaları- Kayahan Mimarlık & İnşaat {% endblock %}
+{% block content %} 
+<main class="main">
+  <div class="page-title dark-background" style="background-image: url({% static 'img/page-title-bg.jpg' %});">
+    <div class="container position-relative">
+      <h1>Koçtaş Mağazaları</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+          <li><a href="{% url 'projects' %}">Projeler</a></li>
+          <li class="current">Koçtaş Mağazaları</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <section class="service-details section">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="services-list">
+            <a href="{% url 'antalya_airport' %}">Antalya Havalimanı Genişletme Projesii</a>
+            <a href="{% url 'arnavutkoy_bb' %}">koctas </a>
+            <a href="{% url 'koctas' %}"  class="active">Koçtaş Mağazaları</a>
+            <a href="{% url 'evidea' %}" >Evidea Mağazaları</a>
+            <a href="{% url 'file' %}">File Marketleri</a>
+            <a href="{% url 'penti' %}">Penti Mağazaları</a>
+            <a href="{% url 'starbucks' %}" >Starbucks Kafe</a>
+
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <h3>Koçtaş Mağazalarıi </h3>
+          <p>3D görselleştirmeler ve konsept tasarımlarla beraber inşai süreçler bizim tarafımızdangerçekleştirimiştir .</p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i>  Beylikdüzü Koçtaş &   Göktürk Koçtaş &   Çorlu Koçtaş  &   Çatalca Koçtaş </li>
+            <li><i class="bi bi-check-circle"></i>Tüm iç tasarım ve mimari deorasyonalar Kayahan Mimarlık & İnşaat  tarafından gerçekleştirilmiştir.</li>
+          </ul>
+             <div class="row g-4">  <!-- g-4 Bootstrap boşluk bırakır -->
+
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="project-card">
+                  <img src="{% static 'img/projects/koctas/1.jpg' %}" alt="koctas">
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="project-card">
+                  <img src="{% static 'img/projects/koctas/2.jpg' %}" alt="koctas">    
+                   </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="project-card">
+                  <img src="{% static 'img/projects/koctas/j.jpg' %}" alt="koctas">
+                </div>
+              </div>
+
+                            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="project-card">
+                  <img src="{% static 'img/projects/koctas/4.jpg' %}" alt="koctas">
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+
+        
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

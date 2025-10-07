@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Penti Mağazaları- Kayahan Mimarlık & İnşaat {% endblock %}
+{% block content %} 
+<main class="main">
+  <div class="page-title dark-background" style="background-image: url({% static 'img/page-title-bg.jpg' %});">
+    <div class="container position-relative">
+      <h1>Penti Mağazaları</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+          <li><a href="{% url 'projects' %}">Projeler</a></li>
+          <li class="current">Penti Mağazaları</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <section class="service-details section">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="services-list">
+            <a href="{% url 'antalya_airport' %}">Antalya Havalimanı Genişletme Projesii</a>
+            <a href="{% url 'arnavutkoy_bb' %}">Arnavutköy Belediye Binası </a>
+            <a href="{% url 'koctas' %}">Koçtaş Mağazaları</a>
+            <a href="{% url 'evidea' %}">Evidea Mağazaları</a>
+            <a href="{% url 'file' %}">File Marketleri</a>
+            <a href="{% url 'penti' %}"class="active">Penti Mağazaları</a>
+            <a href="{% url 'starbucks' %}" >Starbucks Kafe</a>
+
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <h3>Penti Mağazalarıi </h3>
+          <p>3D görselleştirmeler ve konsept tasarımlarla beraber inşai süreçler bizim tarafımızdangerçekleştirimiştir .</p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i>Maxi AVM Penti Mağazası ve Petrocitiy Avm  </li>
+            <li><i class="bi bi-check-circle"></i> Tüm iç tasarım ve mimari deorasyonalr </li>
+          </ul>
+            <div class="row g-4">  <!-- g-4 Bootstrap boşluk bırakır -->
+
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="project-card">
+                  <img src="{% static 'img/projects/penti/1.jpg' %}" alt="Arnavutköy Belediye Binası">
+                </div>
+              </div>
+
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="project-card">
+                  <img src="{% static 'img/projects/penti/2.jpg' %}" alt="Arnavutköy Belediye Binası">
+                </div>
+              </div>
+
+
+
+              <!-- Aynı şekilde diğer projeleri de ekleyebilirsin -->
+
+            </div>
+        </div>
+
+        
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

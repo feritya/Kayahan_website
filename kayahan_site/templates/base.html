@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="description" content="İstanbul Güngören, Bağcılar, Bakırköy ve çevresinde kentsel dönüşüm, mimarlık ve müteahhitlik hizmetleri. Ücretsiz keşif ve riskli bina tespiti için hemen başvurun.">
+
+  <title>{% block title %}Kayahan Mimarlık ve İnşaat | Kentsel Dönüşümün Zirvesi {% endblock %}</title>
+
+  <!-- Favicons -->
+  <link href="{% static 'img/favicon.png' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+  <style>
+  /* Floating Buttons */
+  .floating-buttons {
+    position: fixed;
+    bottom: 25%; /* ekranın 1/4 yukarısında */
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+  }
+
+  .floating-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.3s ease;
+    background-color: #333; /* fallback */
+  }
+
+  .floating-btn img {
+    width: 28px;
+    height: 28px;
+    margin-right: 8px;
+  }
+
+  .floating-btn span {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .floating-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  }
+
+  /* WhatsApp Buton Rengi */
+  .floating-btn.whatsapp {
+    background: #25D366;
+    color: #fff;
+  }
+
+  /* Kentsel Dönüşüm Buton Rengi */
+  .floating-btn.kentsel {
+    background: #feb900;
+    color: #fff;
+  }
+  /* Telefon Buton Rengi */
+  .floating-btn.telefon {
+    background: #007bff;
+    color: #fff;
+  } 
+
+  /* Mobilde ikon boyutu ve yazı küçültme */
+  @media (max-width: 576px) {
+    .floating-btn img { width: 24px; height: 24px; }
+    .floating-btn span { font-size: 14px; }
+    .floating-buttons { gap: 8px; right: 15px; bottom: 20%; }
+  }
+  </style>
+</head>
+<body class="{% block bodyclass %}{% endblock %}">
+
+  {% include "header.html" %}
+
+  <main class="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  {% include "footer.html" %}
+
+  <!-- Floating Buttons -->
+<div class="floating-buttons">
+  <!-- WhatsApp -->
+  <a href="https://wa.me/905339253413" target="_blank" class="floating-btn whatsapp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    <span>WhatsApp</span>
+  </a>
+
+  <!-- Kentsel Dönüşüm -->
+  <a href="{% url 'kentsel_donusum' %}" class="floating-btn kentsel">
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Kentsel Dönüşüm">
+    <span>Kentsel Dönüşüm</span>
+  </a>
+    <!-- Telefon -->
+       <!-- Kentsel Dönüşüm -->
+  <a href="tel:+905339253413" class="floating-btn telefon">
+    <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Telefon">
+    <span>Hemen Ara </span>    
+  </a>  
+
+</div>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'vendor/purecounter/purecounter_vanilla.js' %}"></script>
+
+  <!-- Main JS -->
+  <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

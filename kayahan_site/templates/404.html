@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Sayfa Bulunamadı - Kayahan Mimarlık{% endblock %}
+{% block bodyclass %}error-page{% endblock %}
+{% load static %}
+
+{% block content %}
+<main class="main">
+
+  <section class="error-page section text-center d-flex flex-column align-items-center justify-content-center" style="min-height: 80vh;">
+    <h1 style="font-size: 6rem; font-weight: bold; color: #d9534f;">404</h1>
+    <h2>Üzgünüz, aradığınız sayfa bulunamadı.</h2>
+    <p class="mt-3 mb-4">
+      Girdiğiniz bağlantı hatalı olabilir veya sayfa taşınmış olabilir.<br>
+      Lütfen ana sayfaya dönün.
+    </p>
+    <a href="{% url 'index' %}" class="btn btn-primary">
+      <i class="bi bi-house-door"></i> Ana Sayfaya Dön
+    </a>
+  </section>
+
+</main>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Mekanik Uygulamalar - Kayahan Mimarlık{% endblock %}
+{% block content %}
+<main class="main">
+  <div class="page-title dark-background" style="background-image: url({% static 'img/page-title-bg.jpg' %});">
+    <div class="container position-relative">
+      <h1>Mekanik Uygulamalar</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+          <li><a href="{% url 'services' %}">Hizmetler</a></li>
+          <li class="current">Mekanik Uygulamalar</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <section class="service-details section">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="services-list">
+            <a href="{% url 'service_kentsel' %}">Kentsel Dönüşüm</a>
+            <a href="{% url 'service_konut' %}">Konut Projeleri</a>
+            <a href="{% url 'service_magaza' %}">Mağaza & Ofis Dekorasyonu</a>
+            <a href="{% url 'service_interior' %}">İç Mimarlık</a>
+            <a href="{% url 'service_mekanik' %}" class="active">Mekanik Uygulamalar</a>
+            <a href="{% url 'service_site' %}">Şantiye Yönetimi</a>
+          </div>
+          <h4>Teknik Uygulamalarda Güvenilir Çözümler</h4>
+          <p>Elektrik, mekanik, yangın tesisatı ve altyapı çözümleri sunuyoruz.</p>
+        </div>
+        <div class="col-lg-8">
+          <img src="{% static 'img/mekanik.jpg' %}" alt="Mekanik Uygulamalar" class="img-fluid services-img">
+          <h3>Standartlara Uygun Teknik Hizmetler</h3>
+          <p>Mühendislik standartlarına uygun çözümlerle, projelerin güvenliğini ve verimliliğini artırıyoruz.</p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> Elektrik ve mekanik sistem projelendirme</li>
+            <li><i class="bi bi-check-circle"></i> Test & devreye alma süreçleri</li>
+            <li><i class="bi bi-check-circle"></i> Bakım ve garanti desteği</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}{{ ilce }} Kentsel Dönüşüm | Kayahan Mimarlık & İnşaat{% endblock %}
+{% block content %}
+
+<main class="main">
+
+  <div class="page-title dark-background" style="background-image: url({% static 'img/page-title-bg.jpg' %});">
+    <div class="container position-relative">
+      <h1>{{ ilce }} Kentsel Dönüşüm</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="/">Ana Sayfa</a></li>
+          <li class="current">{{ ilce }} Kentsel Dönüşüm</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="row gy-4">
+        <div class="col-lg-6">
+          <img src="{% static 'img/kentsel-donusum.jpg' %}" class="img-fluid rounded" alt="{{ ilce }} kentsel dönüşüm">
+        </div>
+
+        <div class="col-lg-6">
+          <h2>{{ ilce }}’de Kentsel Dönüşüm Hizmetleri</h2>
+          <p>
+            Kayahan Mimarlık & İnşaat olarak <strong>{{ ilce }} kentsel dönüşüm</strong> projelerinde uzman ekibimizle yanınızdayız.
+            Çürük raporu alınması, ada-parsel hesaplamaları, zemin etüdü, ruhsat ve proje çizimi dahil tüm süreçleri sizin adınıza yönetiyoruz.
+          </p>
+          <p>
+            <strong>{{ ilce }}’de bina güçlendirme, riskli yapı tespiti ve yeni konut projeleri</strong> için bizimle iletişime geçin.
+            Bugüne kadar yüzlerce aileye güvenli yaşam alanları sunduk. Sıradaki siz olun!
+          </p>
+
+        </div>
+      </div>
+
+      <hr class="my-5">
+
+      <h3>Fiyat ve Uygunluk Bilgisi Alın</h3>
+      <a href="{% url "kentsel_donusum" %}" class="btn btn-primary mt-3"> Hemen Teklif Alın</a>
+
+    </div>
+  </section>
+
+</main>
+{% endblock %}

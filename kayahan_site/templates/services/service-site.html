@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Şantiye Yönetimi - Kayahan Mimarlık{% endblock %}
+{% block content %}
+<main class="main">
+  <div class="page-title dark-background" style="background-image: url({% static 'img/page-title-bg.jpg' %});">
+    <div class="container position-relative">
+      <h1>Şantiye Yönetimi</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+          <li><a href="{% url 'services' %}">Hizmetler</a></li>
+          <li class="current">Şantiye Yönetimi</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <section class="service-details section">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="services-list">
+            <a href="{% url 'service_kentsel' %}">Kentsel Dönüşüm</a>
+            <a href="{% url 'service_konut' %}">Konut Projeleri</a>
+            <a href="{% url 'service_magaza' %}">Mağaza & Ofis Dekorasyonu</a>
+            <a href="{% url 'service_interior' %}">İç Mimarlık</a>
+            <a href="{% url 'service_mekanik' %}">Mekanik Uygulamalar</a>
+            <a href="{% url 'service_site' %}" class="active">Şantiye Yönetimi</a>
+          </div>
+          <h4>Profesyonel Şantiye Yönetimi</h4>
+          <p>Projelerin zamanında ve eksiksiz tamamlanabilmesi için saha yönetimini titizlikle yürütüyoruz.</p>
+        </div>
+        <div class="col-lg-8">
+          <img src="{% static 'img/santiye.jpg' %}" alt="Şantiye Yönetimi" class="img-fluid services-img">
+          <h3>Başarılı Projelerin Anahtarı</h3>
+          <p>Şantiye yönetiminde iş güvenliği, malzeme tedariki ve kalite kontrol en büyük önceliğimizdir.</p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> Etkin saha yönetimi</li>
+            <li><i class="bi bi-check-circle"></i> Malzeme tedarik ve lojistik</li>
+            <li><i class="bi bi-check-circle"></i> İş güvenliği ve kalite kontrol</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

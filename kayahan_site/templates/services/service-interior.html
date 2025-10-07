@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}İç Mimarlık - Kayahan Mimarlık{% endblock %}
+{% block content %}
+<main class="main">
+  <div class="page-title dark-background" style="background-image: url({% static 'img/page-title-bg.jpg' %});">
+    <div class="container position-relative">
+      <h1>İç Mimarlık</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+          <li><a href="{% url 'services' %}">Hizmetler</a></li>
+          <li class="current">İç Mimarlık</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <section class="service-details section">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="services-list">
+            <a href="{% url 'service_kentsel' %}">Kentsel Dönüşüm</a>
+            <a href="{% url 'service_konut' %}">Konut Projeleri</a>
+            <a href="{% url 'service_magaza' %}">Mağaza & Ofis Dekorasyonu</a>
+            <a href="{% url 'service_interior' %}" class="active">İç Mimarlık</a>
+            <a href="{% url 'service_mekanik' %}">Mekanik Uygulamalar</a>
+            <a href="{% url 'service_site' %}">Şantiye Yönetimi</a>
+          </div>
+          <h4>Modern ve Özgün Tasarımlar</h4>
+          <p>İç mekanlarda estetik ve fonksiyonelliği birleştirerek özgün çözümler sunuyoruz.</p>
+        </div>
+        <div class="col-lg-8">
+          <img src="{% static 'img/interior.jpg' %}" alt="İç Mimarlık" class="img-fluid services-img">
+          <h3>Yaşam Alanlarınıza Değer Katıyoruz</h3>
+          <p>3D görselleştirmeler ve konsept tasarımlarla, kullanıcı odaklı mekan çözümleri geliştiriyoruz.</p>
+          <ul>
+            <li><i class="bi bi-check-circle"></i> 3D modelleme ve render</li>
+            <li><i class="bi bi-check-circle"></i> Konsept ve malzeme seçimi</li>
+            <li><i class="bi bi-check-circle"></i> Fonksiyonel planlama</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

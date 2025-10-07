@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block title %}Hakkımızda - Kayahan Mimarlık{% endblock %}
+{% block bodyclass %}about-page{% endblock %}
+{% load static %}
+{% block content %}
+<main class="main">
+
+  <!-- Page Title -->
+  <div class="page-title dark-background" style="background-image: url({% static 'img/page-title-bg.jpg' %});">
+    <div class="container position-relative">
+      <h1>Hakkımızda</h1>
+      <nav class="breadcrumbs">
+        <ol>
+          <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+          <li class="current">Hakkımızda</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="about section py-5">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-lg-6 text-center text-lg-start" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'img/about.jpg' %}" alt="Kayahan Mimarlık" class="img-fluid rounded shadow">
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <h2 class="inner-title">Kayahan Mimarlık & İnşaat</h2>
+          <div class="our-story">
+            <h4>Değişimin Öncülerinden</h4>
+            <h3>Biz Kimiz?</h3>
+            <p>
+              Kayahan Mimarlık & İnşaat markasıyla Kentsel dönüşüm, konut projeleri, mağaza & ofis dekorasyonu, iç mimarlık ve mekanik uygulamalarda modern 
+              çözümler sunuyoruz.
+            </p>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check-circle me-2 text-primary"></i>Güvenilir ve deneyimli mimar & mühendis kadrosu</li>
+              <li><i class="bi bi-check-circle me-2 text-primary"></i>Zamanında ve kaliteli teslimat</li>
+              <li><i class="bi bi-check-circle me-2 text-primary"></i>Yasal süreçlerde profesyonel danışmanlık</li>
+              <li><i class="bi bi-check-circle me-2 text-primary"></i>Müşteri memnuniyetine odaklı yaklaşım</li>
+            </ul>
+            <p>Amacımız; sadece yapılar inşa etmek değil, güvenli, modern ve sürdürülebilir yaşam alanları kazandırmaktır.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Counter Section -->
+  <section id="stats-counter" class="stats-counter section py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title text-center mb-4">
+        <h2>İstatistikler</h2>
+        <p>Kayahan Mimarlık & İnşaat’ın bugüne kadar tamamladığı başarılı projeler</p>
+      </div>
+      <div class="row gy-4 text-center">
+        <div class="col-6 col-md-3">
+          <div class="stats-item">
+            <i class="bi bi-emoji-smile color-blue fs-2"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="100" class="purecounter fs-4 fw-bold"></span>
+              <p class="mt-2">Mutlu Müşteri</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stats-item">
+            <i class="bi bi-journal-richtext color-orange fs-2"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="22" class="purecounter fs-4 fw-bold"></span>
+              <p class="mt-2">Tamamlanan Proje</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stats-item">
+            <i class="bi bi-building color-green fs-2"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="5" class="purecounter fs-4 fw-bold"></span>
+              <p class="mt-2">Yıllık Deneyim</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stats-item">
+            <i class="bi bi-people color-pink fs-2"></i>
+            <div>
+              <span data-purecounter-start="0" data-purecounter-end="5" class="purecounter fs-4 fw-bold"></span>
+              <p class="mt-2">Profesyonel Çalışan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission & Vision -->
+  <section id="alt-services" class="alt-services section py-5">
+    <div class="container">
+      <div class="row gy-4 align-items-center justify-content-around">
+        <div class="col-lg-6 text-center text-lg-start" data-aos="fade-up" data-aos-delay="100">
+          <img src="{% static 'img/mission.jpg' %}" alt="Misyon & Vizyon" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
+          <h3>Misyon & Vizyon</h3>
+          <p>
+            Müşterilerimizin beklentilerini aşan güvenli ve modern yapılar üretmek, mimarlık ve inşaat sektöründe kalite standartlarını yükseltmek.
+          </p>
+          <div class="icon-box d-flex align-items-start mb-3">
+            <i class="bi bi-bullseye fs-3 me-3 text-primary"></i>
+            <div>
+              <h4>Misyonumuz</h4>
+              <p>Güvenli, modern ve sürdürülebilir yaşam alanları inşa etmek.</p>
+            </div>
+          </div>
+          <div class="icon-box d-flex align-items-start mb-3">
+            <i class="bi bi-eye fs-3 me-3 text-primary"></i>
+            <div>
+              <h4>Vizyonumuz</h4>
+              <p>Türkiye’nin önde gelen mimarlık ve inşaat firmalarından biri olmak.</p>
+            </div>
+          </div>
+          <div class="icon-box d-flex align-items-start mb-3">
+            <i class="bi bi-award fs-3 me-3 text-primary"></i>
+            <div>
+              <h4>Değerlerimiz</h4>
+              <p>Kalite, güven, müşteri memnuniyeti ve sürdürülebilirlik.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock %}

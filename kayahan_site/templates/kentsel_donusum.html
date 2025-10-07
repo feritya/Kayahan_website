@@ -1,0 +1,110 @@
+{% extends "base.html" %}
+{% block title %}Kentsel Dönüşüm - Kayahan Mimarlık{% endblock %}
+{% block bodyclass %}contact-page{% endblock %}
+{% block content %}
+{% load static %}
+  <main class="main">
+
+    <!-- Page Title -->
+  <div class="page-title dark-background" style="background-image: url({% static 'img/page-title-bg.jpg' %});">
+      <div class="container position-relative">
+        <h1>Kentsel Dönüşüm </h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+            <li class="current">Kentsel Dönüşüm</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Contact Section -->
+<section id="contact" class="contact section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row align-items-center gy-4">
+
+      <!-- Sol taraf: Görsel -->
+      <div class="col-lg-6 text-center">
+        <img src="{% static 'img/kentsel-donusum.jpg' %}" alt="Kentsel Dönüşüm" class="img-fluid rounded shadow w-100">
+      </div>
+
+      <!-- Sağ taraf: Metin -->
+      <div class="col-lg-6 text-center text-lg-start">
+        <h2 class="fw-bold">Kentsel Dönüşüm Başvuru Formu</h2>
+        <p>
+          Kayahan Mimarlık olarak uzman ekibimizle kentsel dönüşüm sürecinizi başından sonuna kadar yönetiyoruz.
+          Binanızın risk analizinden ruhsat aşamasına kadar tüm süreci sizin adınıza takip ediyoruz.
+        </p>
+        <p>
+          Aşağıdaki formu doldurarak <strong>ücretsiz keşif ve fiyat teklifi</strong> alabilirsiniz.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Form Alanı -->
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-8">
+        <div class="card shadow p-4 border-0">
+          <form method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+            <p class="text-center fw-bold">*Teklif Formunu Lütfen Eksiksiz Doldurun.</p>
+            {% csrf_token %}
+            <div class="row gy-3">
+
+              <div class="col-md-6">
+                <input type="text" name="ad_soyad" class="form-control" placeholder="Adınız-Soyadınız" required>
+              </div>
+
+              <div class="col-md-6">
+                <input type="email" class="form-control" name="email" placeholder="Mail Adresiniz" required>
+              </div>
+
+              <div class="col-md-6">
+                <input type="number" class="form-control" name="telefon" placeholder="Telefon Numaranız" required>
+              </div>
+
+              <div class="col-md-6">
+                <input type="text" class="form-control" name="adres" placeholder="Adresiniz" required>
+              </div>
+
+              <div class="col-md-4">
+                <input type="number" class="form-control" name="ada_no" placeholder="Ada numarası" required>
+              </div>
+
+              <div class="col-md-4">
+                <input type="number" class="form-control" name="parsel_no" placeholder="Parsel numarası" required>
+              </div>
+
+              <div class="col-md-4">
+                <input type="number" class="form-control" name="bina_yasi" placeholder="Bina yaşı" required>
+              </div>
+
+              <div class="col-md-12">
+                <input type="number" class="form-control" name="daire_sayisi" placeholder="Daire sayısı" required>
+              </div>
+
+              <div class="col-md-12">
+                <textarea class="form-control" name="aciklama" rows="5" placeholder="Detaylı açıklama yapabilirsiniz" required></textarea>
+              </div>
+
+              <div class="col-md-12 text-center">
+                <div class="loading">Yükleniyor</div>
+                <div class="error-message"></div>
+                {% if success %}
+                <div class="sent-message">Mesajınız Başarıyla Gönderildi Teşekkürler</div>
+                {% endif %}
+                <button type="submit" class="btn btn-primary px-4 py-2 mt-2">Teklif Al</button>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  </main>
+{% endblock %}

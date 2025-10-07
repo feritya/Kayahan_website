@@ -1,0 +1,116 @@
+
+{% extends "base.html" %}
+{% block title %}Contact - Kayahan Mimarlık{% endblock %}
+{% block bodyclass %}contact-page{% endblock %}
+{% block content %}
+{% load static %}
+  <main class="main">
+
+    <!-- Page Title -->
+  <div class="page-title dark-background" style="background-image: url({% static 'img/page-title-bg.jpg' %});">
+      <div class="container position-relative">
+        <h1>İLETİŞİME GEÇİN </h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+            <li class="current">İletişim</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Adresimiz</h3>
+              <p>Canbey Plaza, Osmaniye, Şirin Sk. No:20 Daire:2, 34146 Bakırköy/İstanbul
+              </p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone"></i>
+              <h3>Bizi Arayın</h3>
+              <p> +905339253413</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope"></i>
+              <h3>Email</h3>
+              <p>kamuranyasar13@gmail.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+        <div class="row gy-4 mt-1">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d677.1960902674957!2d28.87685648843162!3d40.995123310668106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2str!4v1758986770125!5m2!1sen!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div><!-- End Google Maps -->
+
+          <div class="col-lg-6">
+            <form  method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+                  {% csrf_token %}
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Adınız" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Mail Adresiniz" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Mesajın Konusu" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Mesajınınız" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Yükleniyor</div>
+                  <div class="error-message"></div>
+
+                   {% if success %}
+                  <div class="sent-message">Mesajınız Başarıyla Gönderildi Teşekkürler</div>
+                  {% endif %}
+                  <button type="submit">Mesajı Gönder</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+

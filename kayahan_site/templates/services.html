@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+{% block title %}Services - Kayahan Mimarlık{% endblock %}
+{% block bodyclass %}services-page{% endblock %}
+{% block content %}
+{% load static %}
+  <main class="main">
+
+    <!-- Page Title -->
+  <div class="page-title dark-background" style="background-image: url({% static 'img/page-title-bg.jpg' %});">
+      <div class="container position-relative">
+        <h1>Hizmetlerimiz</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+            <li class="current">Hizmetlerimiz</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-mountain-city"></i>
+              </div>
+              <h3>KENTSEL DÖNÜŞÜM</h3>
+                  <P>Şirketimiz, kentsel dönüşüm alanında güvenilir çözümler sunarak modern, güvenli ve sürdürülebilir yaşam alanları inşa etmektedir. Hukuki süreçlerden mühendislik çözümlerine kadar tüm aşamaları profesyonel ekibimizle yönetiyoruz.</P>
+              <a href="{% url 'service_kentsel' %}" class="readmore stretched-link">Devam Et <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Konut Projeleri ve Tadilat</h3>
+                    <P>Modern mimari anlayışla toplu konut, site ve özel konut projeleri geliştiriyoruz. Ayrıca mevcut yapıların yenilenmesi, tadilat ve dekorasyon çalışmalarında kaliteli malzeme ve estetik çözümlerle hizmet veriyoruz.</P>
+              <a href="{% url "service_konut" %}" class="readmore stretched-link">Devam Et  <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-compass-drafting"></i>
+              </div>
+              <h3>Mağaza ve Ofis Dekorasyonu</h3>
+              <p>Kurumsal kimliğe uygun mağaza, showroom ve ofis dekorasyonlarında işlevsellik ve estetiği bir araya getiriyoruz. Hazırlanan projeler hızlı uygulama ve kaliteli işçilikle hayata geçirilmektedir.</p>
+                  <a href="{% url "service_magaza" %}" class="readmore stretched-link">Devam Et  <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-trowel-bricks"></i>
+              </div>
+              <h3>İç Mimarlık ve Mekân Tasarımı</h3>
+              <p>İç mekân planlamalarında özgün tasarım, modern çizgiler ve kullanıcı odaklı çözümler sunuyoruz. 3 boyutlu görselleştirmeler ve teknik projelerle hayal edilen yaşam alanlarını gerçeğe dönüştürüyoruz.</p>
+              <a href="{% url "service_interior" %}" class="readmore stretched-link">Devam Et  <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-helmet-safety"></i>
+              </div>
+              <h3>Mekanik ve Teknik Uygulamalar</h3>
+              <p>Elektrik, mekanik, yangın tesisatı ve altyapı çözümlerinde mühendislik standartlarına uygun hizmet sağlıyoruz. Projelerin her aşamasında güvenlik ve verimliliği önceliklendiriyoruz..</p>
+              <a href="{% url "service_mekanik" %}" class="readmore stretched-link">Devam Et  <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Şantiye Yönetimi ve Uygulama Takibi</h3>
+              <p>Projelerin zamanında ve eksiksiz tamamlanabilmesi için saha yönetimi, malzeme tedariki ve kalite kontrol süreçlerini titizlikle yürütüyoruz. İş güvenliği ve çevre duyarlılığı, şantiye operasyonlarımızın temel prensibidir.</p>
+              <a href="{% url "service_site" %}" class="readmore stretched-link">Devam Et  <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Features Cards Section -->
+    <section id="features-cards" class="features-cards section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <h3>Kentsel Dönüşüm — YENİ YAŞAM ALANLARI</h3>
+            <p>Kentsel dönüşüm projelerinde bütüncül yaklaşımla; yapı güvenliği, mevzuat uyumu ve kullanıcı odaklı yaşam kalitesi hedeflenir. Mevcut yapının analizinden, proje yönetimine ve anahtar teslim uygulamaya kadar tüm süreçleri üstleniyoruz.</p>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check2"></i> <span>Yasal süreç ve ruhsat danışmanlığı</span></li>
+              <li><i class="bi bi-check2"></i> <span>Yapı güçlendirme & deprem dayanımı çalışmaları</span></li>
+              <li><i class="bi bi-check2"></i> <span>Sosyal donatı ve yaşam kalite planlaması</span></li>
+            </ul>
+          </div><!-- End feature item-->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <h3>Proje Yönetimi & Maliyet Kontrolü</h3>
+            <p> Projelerin zamanında, bütçe içinde ve sözleşme şartlarına uygun teslimi için kapsamlı proje yönetimi sunuyoruz. Tedarikçi seçiminden iş programı takibine, finansal raporlama ve maliyet optimizasyonuna kadar aktif rol alıyoruz.</p>
+
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check2"></i> <span>Ayrıntılı maliyet ve ön keşif raporları</span></li>
+              <li><i class="bi bi-check2"></i> <span>Tedarikçi koordinasyonu & sözleşme yönetimi</span></li>
+              <li><i class="bi bi-check2"></i> <span>Periyodik ilerleme raporları ve kalite kontrol</span></li>
+            </ul>
+          </div><!-- End feature item-->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <h3>İç Mimarlık & 3D Görselleştirme</h3>
+            <p>Estetik ve fonksiyonelliği birleştiren iç mekân tasarımları hazırlıyor; 3 boyutlu realist sunumlarla müşteriye projeyi en net biçimde gösteriyoruz. Tasarım onayından uygulama detaylarına kadar süreci yönetiyoruz.</p>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check2"></i> <span>Konsept geliştirme ve maket/3D sunum</span></li>
+              <li><i class="bi bi-check2"></i> <span>Malzeme seçimi ve uygulama detayları</span></li>
+
+              <li><i class="bi bi-check2"></i> <span>Fonksiyonel mekan planlaması</span></li>
+            </ul>
+          </div><!-- End feature item-->
+
+          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <h3>Mekanik & Teknik Uygulamalar</h3>
+            <p>Elektrik, mekanik ve yangın tesisatı gibi teknik disiplinlerde mühendislik standartlarına uygun çözümler sunuyoruz. Proje aşamasından saha uygulamasına kadar teknik uyumluluğu garantiliyoruz.</p>
+            <ul class="list-unstyled">
+              <li><i class="bi bi-check2"></i> <span>Mühendislik projelendirme (MEP)</span></li>
+              <li><i class="bi bi-check2"></i> <span>Test & devreye alma süreçleri</span></li>
+              <li><i class="bi bi-check2"></i> <span>Periyodik bakım ve garanti desteği </span></li>
+            </ul>
+          </div><!-- End feature item-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Cards Section -->
+
+    <!-- Alt Services 2 Section -->
+    <section id="alt-services-2" class="alt-services-2 section">
+
+      <div class="container">
+
+        <div class="row justify-content-around gy-4">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+            <h3>Kayahan Mimarlık & İnşaat’ı Neden Tercih Etmelisiniz?</h3>
+            <p>Güvenilir, şeffaf, yenilikçi ve çözüm odaklı yaklaşımımızla, her projeyi zamanında, bütçesine uygun ve kalite standartlarından ödün vermeden tamamlıyoruz. Müşterilerimizin beklentilerini aşan çözümler üretmek temel ilkemizdir.</p>
+
+            <div class="row">
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-easel flex-shrink-0"></i>
+                <div>
+                  <h4>Deneyimli Kadro
+                    </h4>
+                  <p>Alanında uzman mimar, mühendis ve şantiye ekibiyle her aşamada profesyonel destek.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-patch-check flex-shrink-0"></i>
+                <div>
+                  <h4>Zamanında Teslim</h4>
+                  <p>Proje yönetim metodolojimiz sayesinde işler planlanan sürede ve sorunsuz tamamlanır. </p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-brightness-high flex-shrink-0"></i>
+                <div>
+                  <h4>Kalite ve Güvenlik</h4>
+                  <p>Malzeme seçiminden uygulamaya, tüm süreçlerde kalite ve iş güvenliği önceliğimizdir.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-brightness-high flex-shrink-0"></i>
+                <div>
+                  <h4>Müşteri Memnuniyeti
+</h4>
+                  <p>Şeffaf iletişim, sürekli bilgilendirme ve müşteri odaklı yaklaşım ile uzun vadeli güven ilişkisi.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+            </div>
+
+          </div>
+
+          <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static "img/features-3-2.jpg" %}" alt="">
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Alt Services 2 Section -->
+
+
+  </main>
+{% endblock %}

@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+{% block title %}Projects - Kayahan Mimarlık{% endblock %}
+{% block bodyclass %}projects-page{% endblock %}
+{% block content %}
+
+{% load static %}
+
+  <main class="main">
+
+    <!-- Page Title -->
+  <div class="page-title dark-background" style="background-image: url({% static 'img/page-title-bg.jpg' %});">
+      <div class="container position-relative">
+        <h1>Projeler</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li class="current">Projelerimiz</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          {% comment %} <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">Tümü</li>
+            <li data-filter=".filter-remodeling">Remodeling</li>
+            <li data-filter=".filter-construction">Construction</li>
+            <li data-filter=".filter-repairs">Repairs</li>
+            <li data-filter=".filter-design">Design</li>
+          </ul><!-- End Portfolio Filters --> {% endcomment %}
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{% static "img/projects/antalya_airport_fp.png" %}"  class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Antalya Airport </h4>
+                  <p></p>
+                  <a href="{% static "img/projects/antalya_airport.jpg" %}" title="antalya havalimanı otoparkı" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{% url "antalya_airport" %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+                        <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{% static "img/projects/arnavutkoybb_fp.jpg" %}" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Arnavutköy Belediye Binası</h4>
+                  <p></p>
+                  <a href="{% static "img/projects/arnavutkoybb.jpg" %}" title="Arnavuytköy Belediye Binası " data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{% url "arnavutkoy_bb" %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{% static "img/projects/koctas_fp.png" %}"  class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Koçtaş Mağazaları </h4>
+                  <p>4 farklı koçtaş mağazası inşaatı </p>
+                  <a href="{% static "img/projects/koctas.jpg" %}" title="Koçtaş Mağazaları " data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{% url "koctas" %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{% static "img/projects/evidea_fp.jpg" %}"  class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Evidea Mağazaları</h4>
+                  <p>4 farklı evide mağazası inşaat gerçekleştirilmmiştir</p>
+                  <a href="{% static "img/projects/evidea.jpg" %}" title="evidea mağazaları " data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{% url "evidea" %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{% static "img/projects/file_fp.jpg" %}"  class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>File Marketleri</h4>
+                  <p>File marketleri inşaaları ve iç mimari tasarımları </p>
+                  <a href="{% static "img/projects/file.jpg" %}" title="File Marketleri" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{% url "file" %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{% static "img/projects/penti_fp.png" %}"  class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Penti Mağazaları</h4>
+                  <p></p>
+                  <a href="{% static "img/projects/penti.png" %}" title="Penti mağazası " data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{% url "penti" %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{% static "img/projects/starbucks_fp.png" %}"  class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Starbucks Kafe</h4>
+                  <p></p>
+                  <a href="{% static "img/projects/starbucks.png" %}" title="Starbucks Kafe" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="{% url 'starbucks' %}" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{% static "img/projects/huxo_cafe_fp.jpg" %}"  class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Güzellik Merkezi</h4>
+                  <p></p>
+                  <a href="{% static "img/projects/huxo_cafe.jpg" %}" title="Güüzellik Merkezi" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{% static "img/projects/eczane_fp.jpg" %}"  class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Kayaşehir Eczane </h4>
+                  <p></p>
+                  <a href="{% static "img/projects/eczane.jpg" %}" title="Kayaşehir Eczane " data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{% static "img/projects/aysenaz_gelinlik_fp.png" %}"  class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Ayşenaz Gelinlik </h4>
+                  <p>gelinlik mağazası iç tasarım ve inşaatı </p>
+                  <a href="{% static "img/projects/aysenaz_gelinlik.png" %}" title="Ayşenaz Gelinlik" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="{% static "img/projects/ofis_fp.jpg" %}"  class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Psikolok Ofisi </h4>
+                  <p>Psikolog ofisi iç tasarım ve tadilat </p>
+                  <a href="{% static "img/projects/ofis.jpg" %}" title="Psikolog Ofisi" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="#" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+
+
+
+            
+
+            
+
+
+
+
+
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Projects Section -->
+
+  </main>
+{% endblock %}
