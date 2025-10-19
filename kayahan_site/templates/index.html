@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% block title %}Kayahan Mimarlık ve İnşaat - Kentsel Dönüşüm {% endblock %}
+{% block title %}Ana Sayfa - Kayahan Mimarlık & İnşaat | Kentsel Dönüşüm, Konut Projeleri{% endblock %}
+{% block meta_description %}Kayahan Mimarlık & İnşaat olarak kentsel dönüşüm, konut projeleri, ofis ve mağaza dekorasyonu hizmetleri sunuyoruz. Antalya Havalimanı, Evidea, Koçtaş gibi referans projelerimizle sektörde güvenilir çözümler üretiyoruz.{% endblock %}
 {% block bodyclass %}index-page{% endblock %}
 
 {% block content %}
@@ -13,9 +14,9 @@
         <div class="container">
           <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
             <div class="col-lg-6 text-center">
-              <h2>KAYAHAN MİMARLIK & İNŞAAT</h2>
+              <h1>KAYAHAN MİMARLIK & İNŞAAT</h1>
                 <p>
-                Geleceğin izlerini taşıyan, geçmişin dersleriyle şekillenen her yapının ardında, insanlığın hayal gücü ve emeği birleşir; sonsuz yaratıcılıkla yükselen ve her detayında hikâyeler saklayan bu yolculuk, nihayetinde 
+                    sonsuz yaratıcılıkla yükselen ve her detayında hikâyeler saklayan bu yolculuk, nihayetinde 
                 <span class="highlight">Uygarlığın Son Mimarisi</span> ile biter.
                 </p>
               <a href="#hizmetler" class="btn-get-started">İncele</a>
@@ -26,16 +27,16 @@
 
       <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
         <div class="carousel-item active">
-          <img src="{% static 'img/hero-carousel/hero-carousel-1.jpg' %}" alt="">
+          <img src="{% static 'img/hero-carousel/hero-carousel-1.jpg' %}" alt="Kayahan Mimarlık - Modern Mimari Tasarım Örnekleri" title="Kayahan Mimarlık - Modern Mimari">
         </div>
         <div class="carousel-item">
-          <img src="{% static 'img/hero-carousel/hero-carousel-2.jpg' %}" alt="">
+          <img src="{% static 'img/hero-carousel/hero-carousel-2.jpg' %}" alt="Kayahan İnşaat - Proje Uygulama Detayları" title="Kayahan İnşaat - Proje Uygulama">
         </div>
         <div class="carousel-item">
-          <img src="{% static 'img/hero-carousel/hero-carousel-3.jpg' %}" alt="">
+          <img src="{% static 'img/hero-carousel/hero-carousel-3.jpg' %}" alt="Kayahan Mimarlık - İç Mekan Tasarım Çözümleri" title="Kayahan Mimarlık - İç Mekan Tasarım">
         </div>
         <div class="carousel-item">
-          <img src="{% static 'img/hero-carousel/hero-carousel-4.jpg' %}" alt="">
+          <img src="{% static 'img/hero-carousel/hero-carousel-4.jpg' %}" alt="Kayahan İnşaat - Tamamlanan Projelerimiz" title="Kayahan İnşaat - Tamamlanan Projeler">
         </div>
       </div>
     </section>
@@ -55,12 +56,38 @@
             <div class="card-item">
               <div class="row">
                 <div class="col-xl-5">
-                  <div class="card-bg"><img src="{% static 'img/projects/antalya_airport.jpg' %}" alt=""></div>
+                  <div class="card-bg">
+                    <a href="{% url 'antalya_airport' %}">
+                      <img src="{% static 'img/projects/antalya_airport.jpg' %}" alt="Antalya Havalimanı Genişletme Projesi - Kayahan İnşaat" title="Antalya Havalimanı Katlı Otopark">
+                    </a>
+                  </div>
                 </div>
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
-                    <h4 class="card-title">Antalya Havalimanı  Genişletme Projesi </h4>
-                    <p> 2 yıl süren Antalya Havalimanı genişletme projesinde antalya havalimanının katlı otoparkıın inşası bizim tarafımızdan gerçekleşti </p>
+                    <h3 class="card-title">Antalya Havalimanı Genişletme Projesi</h3>
+                    <p>2 yıl süren Antalya Havalimanı genişletme projesinde antalya havalimanının katlı otoparkıın inşası bizim tarafımızdan gerçekleşti</p>
+                    <a href="{% url 'antalya_airport' %}" class="btn-details">Proje Detayları</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg">
+                    <a href="{% url 'file' %}">
+                      <img src="{% static 'img/projects/file_fp.jpg' %}" alt="File Marketleri Projesi - Kayahan Mimarlık" title="File Market Mağaza Tasarımı">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h3 class="card-title">File Marketleri</h3>
+                    <p>File Market mağazaları için modern, fonksiyonel ve estetik projeler geliştiriyoruz. Mağaza içi dekorasyon ve tasarım çözümleri.</p>
+                    <a href="{% url 'file' %}" class="btn-details">Proje Detayları</a>
                   </div>
                 </div>
               </div>
@@ -71,12 +98,17 @@
             <div class="card-item">
               <div class="row">
                 <div class="col-xl-5">
-                  <div class="card-bg"><img src="{% static 'img/projects/evidea.jpg' %}" alt=""></div>
+                  <div class="card-bg">
+                    <a href="{% url 'evidea' %}">
+                      <img src="{% static 'img/projects/evidea.jpg' %}" alt="Evidea Mağazaları Tasarım Projesi - Kayahan Mimarlık" title="Evidea Mağaza Dekorasyonu">
+                    </a>
+                  </div>
                 </div>
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
-                    <h4 class="card-title">Evidea mağazaları </h4>
-                    <p>Evidea mağazalar için modern, fonksiyonel ve estetik projeler geliştiriyoruz. 3 farklı Evidea mağazası bizim tarafınmızdan tasarlandı ve geliştirildi.</p>
+                    <h3 class="card-title">Evidea Mağazaları</h3>
+                    <p>Evidea mağazalar için modern, fonksiyonel ve estetik projeler geliştiriyoruz. 3 farklı Evidea mağazası bizim tarafımızdan tasarlandı ve geliştirildi.</p>
+                    <a href="{% url 'evidea' %}" class="btn-details">Proje Detayları</a>
                   </div>
                 </div>
               </div>
@@ -87,12 +119,17 @@
             <div class="card-item">
               <div class="row">
                 <div class="col-xl-5">
-                  <div class="card-bg"><img src="{% static 'img/projects/koctas.jpg' %}" alt=""></div>
+                  <div class="card-bg">
+                    <a href="{% url 'koctas' %}">
+                      <img src="{% static 'img/projects/koctas.jpg' %}" alt="Koçtaş Mağazaları Dekorasyon Projesi - Kayahan Mimarlık" title="Koçtaş Mağaza Tasarımı">
+                    </a>
+                  </div>
                 </div>
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
-                    <h4 class="card-title">Koçtaş Mağazaları </h4>
-                    <p>Koçtaş mağazalar için modern, fonksiyonel ve estetik dekorasyon projeleri geliştiriyoruz. 4 farklı koçtaş mağazası bizim tarafınmızdan tasarlandı ve geliştirildi </p>
+                    <h3 class="card-title">Koçtaş Mağazaları</h3>
+                    <p>Koçtaş mağazalar için modern, fonksiyonel ve estetik dekorasyon projeleri geliştiriyoruz. 4 farklı koçtaş mağazası bizim tarafımızdan tasarlandı ve geliştirildi.</p>
+                    <a href="{% url 'koctas' %}" class="btn-details">Proje Detayları</a>
                   </div>
                 </div>
               </div>
@@ -103,12 +140,17 @@
             <div class="card-item">
               <div class="row">
                 <div class="col-xl-5">
-                  <div class="card-bg"><img src="{% static 'img/projects/arnavutkoybb.jpg' %}" alt=""></div>
+                  <div class="card-bg">
+                    <a href="{% url 'arnavutkoy_bb' %}">
+                      <img src="{% static 'img/projects/arnavutkoybb.jpg' %}" alt="Arnavutköy Belediye Binası Projesi - Kayahan İnşaat" title="Arnavutköy Belediye Binası İnşaatı">
+                    </a>
+                  </div>
                 </div>
                 <div class="col-xl-7 d-flex align-items-center">
                   <div class="card-body">
-                    <h4 class="card-title">Arnavutköy Belediye Binası</h4>
-                    <p>Yapılarımız arasında arnavutköy belediye binası da bulunmaktadır.</p>
+                    <h3 class="card-title">Arnavutköy Belediye Binası</h3>
+                    <p>Yapılarımız arasında Arnavutköy belediye binası da bulunmaktadır. Kamu binaları için güvenli ve fonksiyonel çözümler sunuyoruz.</p>
+                    <a href="{% url 'arnavutkoy_bb' %}" class="btn-details">Proje Detayları</a>
                   </div>
                 </div>
               </div>
@@ -168,7 +210,7 @@
     </section>
     <!-- /Services Section -->
 
-        <!-- Alt Services 2 Section -->
+    <!-- Alt Services 2 Section -->
     <section id="alt-services-2" class="alt-services-2 section">
 
       <div class="container">
@@ -176,7 +218,7 @@
         <div class="row justify-content-around gy-4">
 
           <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-            <h3>Kayahan Mimarlık & İnşaat’ı Neden Tercih Etmelisiniz?</h3>
+            <h3>Kayahan Mimarlık & İnşaat'ı Neden Tercih Etmelisiniz?</h3>
             <p>Güvenilir, şeffaf, yenilikçi ve çözüm odaklı yaklaşımımızla, her projeyi zamanında, bütçesine uygun ve kalite standartlarından ödün vermeden tamamlıyoruz. Müşterilerimizin beklentilerini aşan çözümler üretmek temel ilkemizdir.</p>
 
             <div class="row">
@@ -184,8 +226,7 @@
               <div class="col-lg-6 icon-box d-flex">
                 <i class="bi bi-easel flex-shrink-0"></i>
                 <div>
-                  <h4>Deneyimli Kadro
-                    </h4>
+                  <h4>Deneyimli Kadro</h4>
                   <p>Alanında uzman mimar, mühendis ve şantiye ekibiyle her aşamada profesyonel destek.</p>
                 </div>
               </div><!-- End Icon Box -->
@@ -194,7 +235,7 @@
                 <i class="bi bi-patch-check flex-shrink-0"></i>
                 <div>
                   <h4>Zamanında Teslim</h4>
-                  <p>Proje yönetim metodolojimiz sayesinde işler planlanan sürede ve sorunsuz tamamlanır. </p>
+                  <p>Proje yönetim metodolojimiz sayesinde işler planlanan sürede ve sorunsuz tamamlanır.</p>
                 </div>
               </div><!-- End Icon Box -->
 
@@ -209,8 +250,7 @@
               <div class="col-lg-6 icon-box d-flex">
                 <i class="bi bi-brightness-high flex-shrink-0"></i>
                 <div>
-                  <h4>Müşteri Memnuniyeti
-                    </h4>
+                  <h4>Müşteri Memnuniyeti</h4>
                   <p>Şeffaf iletişim, sürekli bilgilendirme ve müşteri odaklı yaklaşım ile uzun vadeli güven ilişkisi.</p>
                 </div>
               </div><!-- End Icon Box -->
@@ -220,7 +260,7 @@
           </div>
 
           <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
-            <img src="{% static "img/features-3-2.jpg" %}" alt="">
+            <img src="{% static "img/features-3-2.jpg" %}" alt="Kayahan Mimarlık & İnşaat - Profesyonel Ekip ve Hizmet Kalitesi" title="Kayahan Mimarlık Profesyonel Ekip">
           </div>
 
         </div>
@@ -228,8 +268,6 @@
       </div>
 
     </section><!-- /Alt Services 2 Section -->
-
-
 
   </main>
 {% endblock %}
