@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Kentsel Dönüşüm - Kayahan Mimarlık{% endblock %}
+{% block title %}Kentsel Dönüşüm - Kayahan Mimarlık & İnşaat{% endblock %}
 {% block bodyclass %}contact-page{% endblock %}
 {% block content %}
 {% load static %}
@@ -11,7 +11,7 @@
         <h1>Kentsel Dönüşüm </h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{% url 'home' %}">Ana Sayfa</a></li>
+            <li><a href="{% url 'home' %}">Ana Sayfa </a></li>
             <li class="current">Kentsel Dönüşüm</li>
           </ol>
         </nav>
@@ -34,10 +34,10 @@
         <h2 class="fw-bold">Kentsel Dönüşüm Başvuru Formu</h2>
         <p>
           Kayahan Mimarlık & İnşaat  olarak uzman ekibimizle kentsel dönüşüm sürecinizi başından sonuna kadar yönetiyoruz.
-          Binanızın risk analizinden ruhsat aşamasına kadar tüm süreci sizin adınıza takip ediyoruz.
+          Binanızın risk analizinden ruhsat aşamasına kadar tüm süreci sizin adınıza takip ediyoruz. Sizden bilgileri alıyor araştırıyor ve size en avantajlı fiyatlarla geri dönüyoruz .güven  ve şeffaflığı önplana koyarak, sürecin işleyişini en anlaşılır şekilde sizlere açıklıyoruz.
         </p>
         <p>
-          Aşağıdaki formu doldurarak <strong>ücretsiz keşif ve fiyat teklifi</strong> alabilirsiniz.
+          Aşağıdaki formu doldurarak <strong>ücretsiz keşif ve fiyat teklifi</strong> alabilirsiniz. 
         </p>
       </div>
 
@@ -47,8 +47,8 @@
     <div class="row justify-content-center mt-5">
       <div class="col-lg-8">
         <div class="card shadow p-4 border-0">
-          <form method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
-            <p class="text-center fw-bold">*Teklif Formunu Lütfen Eksiksiz Doldurun.</p>
+          <form method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400" >
+            <p class="text-center fw-bold">*Teklif Formunu Eksiksiz doldurun. Whatsap ve Telefon numaramızdan da hemen iletişime geçebilirsiniz.</p>
             {% csrf_token %}
             <div class="row gy-3">
 
@@ -65,7 +65,7 @@
               </div>
 
               <div class="col-md-6">
-                <input type="text" class="form-control" name="adres" placeholder="Adresiniz" required>
+                <input type="text" class="form-control" name="adres" placeholder="Adresiniz: ilçe ve mahalle olarak belirtebilirsiziniz(Bakırköy/Yenimahalle)" required>
               </div>
 
               <div class="col-md-4">
@@ -77,7 +77,7 @@
               </div>
 
               <div class="col-md-4">
-                <input type="number" class="form-control" name="bina_yasi" placeholder="Bina yaşı" required>
+                <input type="number" class="form-control" name="bina_yasi" placeholder="Bina yaşı">
               </div>
 
               <div class="col-md-12">
@@ -85,7 +85,7 @@
               </div>
 
               <div class="col-md-12">
-                <textarea class="form-control" name="aciklama" rows="5" placeholder="Detaylı açıklama yapabilirsiniz" required></textarea>
+                <textarea class="form-control" name="aciklama" rows="5" placeholder="Lütfen Size Teklifi Hazırlamadan önce belirtilmesi gereken önemli hususları belirtin" required></textarea>
               </div>
 
               <div class="col-md-12 text-center">
