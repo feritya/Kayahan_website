@@ -56,12 +56,14 @@ def kentsel_donusum_view(request):
                 recipient_list=['kamuranyasar13@gmail.com'],
             )
 
-            success = True
+            return redirect('kentsel_donusum_success')
     else:
         form = KentselDonusumForm()
 
     return render(request, 'kentsel_donusum.html', {'form': form, 'success': success})
 
+def kentsel_donusum_success(request):
+    return render(request, 'kentsel_donusum_success.html')
 
 # SEO uyumlu kentsel dönüşüm ilçeye göre
 def kentsel_donusum_ilce(request, ilce):
