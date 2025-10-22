@@ -1,1 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
 
+{% block title %}Başvurunuz Alındı - Kayahan Mimarlık & İnşaat{% endblock %}
+
+{% block content %}
+<main class="main py-5" style="min-height: 80vh; background: #102c47ff;">
+  <div class="container d-flex flex-column align-items-center justify-content-center text-center">
+
+    <!-- Logo veya Başlık -->
+    <div class="mb-4">
+      <img src="{% static 'img/logo.png' %}" alt="Kayahan Mimarlık & İnşaat" class="img-fluid" style="max-height: 80px;">
+    </div>
+
+    <!-- Başlık -->
+    <div class="card shadow-lg border-0 p-5 rounded-4" style="max-width: 600px; background: white;">
+      <h2 class="fw-bold text-success mb-3">Başvurunuz Başarıyla Alındı 🎉</h2>
+      <p class="lead text-muted mb-4">
+        Kayahan Mimarlık & İnşaat olarak başvurunuzu aldık.  
+        Uzman ekibimiz en kısa sürede sizinle iletişime geçecektir.
+      </p>
+
+
+      <!-- Buton -->
+      <a href="/" class="btn btn-primary px-4 py-2 rounded-pill">
+        Ana Sayfaya Dön
+      </a>
+    </div>
+  </div>
+</main>
+{% endblock %}
