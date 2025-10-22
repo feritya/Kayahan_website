@@ -32,6 +32,7 @@ urlpatterns = [
 
     # Kentsel Dönüşüm Başvuru Sayfası
     path('kentsel-donusum/',views.kentsel_donusum_view, name='kentsel_donusum'),
+    path('kentsel-donusum/success/', views.kentsel_donusum_success, name='kentsel_donusum_success'),
 
 
 
